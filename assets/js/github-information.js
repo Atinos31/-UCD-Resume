@@ -53,7 +53,7 @@ function fetchGitHubInformation(event) {
 
     $.when(
         $.getJSON(`https://api.github.com/users/${username}`),
-        $.getJSON(`https://api.github.com/users/${username}/repos`),
+        $.getJSON(`https://api.github.com/users/${username}/repos`)
     ).then(
         function(firstResponse, secondResponse) {
             var userData = firstResponse[0];
@@ -65,6 +65,9 @@ function fetchGitHubInformation(event) {
             if (errorResponse.status === 404) {
                 $("#gh-user-data").html(
                     `<h2>No info found for user ${username}</h2>`);
+            } else if (errorResponse.status === 403) {
+                var resetTime = new Date(errorResponse.getResponseHeader('X-RateLimit-Reset') * 1000);
+                $("#gh-user-data").html(`<h4>Too many requests, please wait until ${resetTime.toLocaleTimeString()}</h4>`);
             } else {
                 console.log(errorResponse);
                 $("#gh-user-data").html(
@@ -72,4 +75,5 @@ function fetchGitHubInformation(event) {
             }
         });
 }
+
 $(document).ready(fetchGitHubInformation);
