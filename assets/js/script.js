@@ -87,6 +87,32 @@ btn.addEventListener('mouseleave', () => {
 })
 
 // enf of main button
+// progress bar
+const halfCircles = document.querySelectorAll(".half-circle");
+const halfCircleTop = document.querySelector(".half-circle-top");
+const progressBarCircle = document.querySelector(".progress-bar-circle");
+
+const progressBarFn = () => {
+    const pageViewportHeight = window.innerHeight;
+    const pageHeight = document.documentElement.scrollHeight;
+    const scrolledPortion = window.pageYOffset;
+    const scrolledPortionDegree = (scrolledPortion / (pageViewportHeight)) * 360;
+
+    halfCircles.forEach(el => {
+        el.style.transform = `rotate(${scrolledPortionDegree}deg)`;
+
+        if(scrolledPortionDegree >= 180){
+            halfCircles[0].style.transform = "rotate(180deg)";
+            halfCircleTop.style.opacity = "0";
+        }else{
+            halfCircleTop.style.opacity = "1";
+
+        }
+
+    });
+
+};
+// end of progress bar
 
 // navigation
 const menuIcon = document.querySelector(".menu-icon");
@@ -100,6 +126,8 @@ document.addEventListener("scroll",() => {
         menuIcon.classList.remove("show-menu-icon");
         navbar.classList.remove("hide-navbar");
     }
+
+    progressBarFn();
 });
 
 menuIcon.addEventListener("click", () => {
