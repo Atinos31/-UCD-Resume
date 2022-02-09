@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Estonia&family=Jura:wght@300;400;500;600;700&family=Merriweather:wght@300&family=Roboto+Slab&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Estonia&family=Merriweather:wght@300&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Syne+Tactile&display=swap');
 /*--------------------------------------------Colors*/
 
 /* global styles*/
@@ -23,6 +24,11 @@ html{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo{
+    font-family: 'Syne Tactile', cursive;
+    font-weight:400;
 }
 
 /* section heading */
@@ -362,12 +368,12 @@ html{
 }
 
 .circle{
-    width: 19rem;
-    height: 19rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 50%;
     align-self: center;
     justify-self: center;
-    opacity: 0.7;
+    opacity: 0.5;
     position: relative;
     transition:left 3s,top 3s;
     top:0;
@@ -378,7 +384,7 @@ html{
     background: url(../images/landing/circle-1-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
-    border: 0.5rem dotted #a14b1a;
+    border: 0.5rem dotted #b84916;
     margin-left: -10rem;
 }
 
@@ -386,7 +392,7 @@ html{
     background: url(../images/landing/circle-2-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
-    border: 0.5rem dashed #272a38;
+    border: 0.5rem dashed #242423;
     margin-right: -10rem;
 }
 

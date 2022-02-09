@@ -138,7 +138,7 @@ menuIcon.addEventListener("click", () => {
 
 // about me text
 const aboutMeText = document.querySelector('.about-me-text');
-const aboutMeTextContent = "I am a skilled Full Stack web Developer with a wealth of diverse knowledge and technical experience that i bring to every project.:)";
+const aboutMeTextContent = "I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients";
 Array.from(aboutMeTextContent).forEach((char) => {
     const span = document.createElement("span");
     span.textContent = char;
