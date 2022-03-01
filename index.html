@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
     <title> Sandra Atino Portfolio- Fullstack Junior Software Engineer</title>
+    
+   
 </head>
 <body>
 <!-- Mouse circle -->
@@ -46,6 +48,7 @@
     <a href="#section-3" class="navbar-link">Projects</a>
     <a href="#section-4" class="navbar-link">Services</a>
     <a href="#section-5" class="navbar-link">Contact</a>
+    <a href="assets/cv/atinosandracv.pdf" class="navbar-link" target="_blank"> CV</a>
 
 </div>
 <!-- end of  navabar -->
@@ -67,8 +70,8 @@
     <!--  End of Animated circles -->
 
     <!-- featured text -->
-    <h4 class="featured-text featured-text-1">Creative</h4>
-    <h4 class="featured-text featured-text-2">Coder</h4>
+    <h4 class="featured-text featured-text-1">Fullstack</h4>
+    <h4 class="featured-text featured-text-2">Dev</h4>
 
     <!-- end of featured text -->
 
@@ -117,16 +120,23 @@
 
 <!-- projects -->
 <div class="projects center">
-    <div class="project">
+         <div class="project">
         <img src="assets/images/projects/project-1.jpg" alt="">
-        <a href="https://fashionista2.herokuapp.com/">click to visit</a>
-    </div>
-    <div class="project">
+        </div>
+          <div class="project">
         <img src="assets/images/projects/project-2.jpg" alt="">
-    </div>
-    <div class="project">
+        </div>  
+        <div class="project">
         <img src="assets/images/projects/project-3.jpg" alt="">
-    </div>
+        </div>  
+        <div class="project">
+        <img src="assets/images/projects/project-4.jpg" alt="">
+        </div>
+         <div class="project">
+        <img src="assets/images/projects/project-7.jpg" alt="">
+        </div>
+    
+    
    
 </div>
 
@@ -193,37 +203,42 @@
     </h1>
     <!--  end section 5 heading -->
     <!-- form -->
-    <div class="form-wrapper">
+    <div class="form-wrapper center-form">
+        
         <h2 class="form-heading">Let's Talk</h2>
-        <form action="" class="contact-form center">
-            <input type="text" class="contact-form-input" placeholder="Name">
-            <input type="email" class="contact-form-input" placeholder="Email">
-            <input type="text" class="contact-form-input" placeholder="Subject">
-            <textarea class="contact-form-input contact-form-textarea" placeholder="Message"></textarea>
-            <input type="submit" class="form-submit-btn" value="Send Request">
+        <form action="post" class="contact-form center" autocomplete="off">
+            <input type="text" class="contact-form-input name" placeholder="Name" name="name" id="name" required>
+            <input type="email" class="contact-form-input email" placeholder="Email" id="email" name="email" required>
+            <input type="text" class="contact-form-input subject" placeholder="Subject" name="subject" id="subject" required>
+            <textarea class="contact-form-input contact-form-textarea message" placeholder="Project Request" name="message" id="message" required></textarea>
+            <input type="submit" class="form-submit-btn center submit" value="Send Request" data-submit="....Sending">
 
         </form>
     </div>
     <!--  end of form -->
+    <!-- loader -->
+    <div class="loader">
+        <img src="https://media0.giphy.com/media/hL9q5k9dk9l0wGd4e0/giphy.gif" alt="">
+    </div>
 
     <!-- slideshow -->
     <div class="slideshow">
-        <a href="" class="slideshow-link">
+        <a href="https://twitter.com/atimsandra7" class="slideshow-link">
             <img src="./assets/images/social/slideshow-img-1.png" alt="twitter icon" style="border-radius:50%;" target="_blank">
         </a>
         <a href="https://www.linkedin.com/in/sandra-a-459a231a9/" class="slideshow-link">
-            <img src="./assets/images/social/slideshow-img-2.png" alt="linkedin icon" target=""_blank>
+            <img src="./assets/images/social/slideshow-img-2.png" alt="linkedin icon" target="_blank">
         </a>
-        <a href="" class="slideshow-link light">
+        <a href="https://www.facebook.com/sandra.rock.182/" class="slideshow-link light">
             <img src="./assets/images/social/slideshow-img-3.png" alt="facebook icon" target="_blank">
         </a>
         <a href="https://github.com/Atinos31" class="slideshow-link">
             <img src="./assets/images/social/slideshow-img-4.png"  style="border-radius: 50%;" alt="github icon" target="_blank">
-            <i class="fas fa-github"></i>
+            
         </a>
-         <a href="" class="slideshow-link">
+         <a href="mailto:atinos31.dev@gmail.com" class="slideshow-link">
             <img src="./assets/images/social/slideshow-img-5.png"  style="border-radius: 40%;" alt="gmail icon" target="_blank">
-            <i class="fas fa-github"></i>
+            
         </a>
        
     </div>
@@ -231,9 +246,26 @@
 
 </section>
 <!--  end of section 5 -->
+</div>
 <!-- end of page container -->
 
 <script src="assets/js/script.js"></script>
-      
+<script src="/assets/js/sendEmail.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+       (function() {
+            emailjs.init("user_ypk2G1kkPoxjbWEmsTwIy");
+        })();
+    </script>
+    
+<!-- 
+User ID
+user_ypk2G1kkPoxjbWEmsTwIy
+Access Token
+7836e4ba6e1f5ef58de7b6f329d8141e -->
+    <!-- SWEET ALERT.JS -->
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 </body>
 </html>

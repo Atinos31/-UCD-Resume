@@ -11,7 +11,7 @@
     text-decoration: none;
     list-style-type: none;
     outline: none;
-    font-family: 'Jura', sans-serif;
+    font-family: 'Poppins', sans-serif;
     
 }
 
@@ -52,7 +52,6 @@ html{
     height:9rem;
     width:9rem;
     border-radius: 50%;
-    background-color: #6232e6;
     bottom:0.1rem;
     border:0.2rem dotted #fff;
     padding:0.1rem;
@@ -62,7 +61,7 @@ html{
 .main-btn-content{
     width:100%;
     height:100%;
-    border: 0.2rem dotted #6232e6;
+    border: 0.2rem dotted #f1f1f1;
     border-radius: 50%;
     transform: rotate(40deg);
     transition: transform 0.2s, border 0.2s;
@@ -70,9 +69,10 @@ html{
 
 .main-btn:hover .main-btn-content{
     transform: rotate(60deg);
+    background-color:#6232e6;
     border: 0.2rem dotted #6232e6;
     transition: transform 0.2s 0.5s, border 0;
-    color: #6232e6;
+    color: #fff;
 
 }
 .main-btn-line{
@@ -113,8 +113,8 @@ html{
     position: absolute;
     width:0;
     height:0;
-    background: #bb5b53;
-    color: #000;
+    background-color: #6232e6;
+    color: #fff;
     border-radius: 50%;
     transform:translate(-50%,-50%);
     animation:rippleAnim 0.5s forwards;
@@ -152,7 +152,7 @@ html{
 .mouse-dot{
     width:0.5rem;
     height:0.5rem;
-    background-color: #4104cf;
+    background-color:#6232e6;
     animation: mouseDotAnim 10s infinite linear;
 }
 
@@ -368,8 +368,8 @@ html{
 }
 
 .circle{
-    width: 8rem;
-    height: 8rem;
+    width: 4rem;
+    height: 4rem;
     border-radius: 50%;
     align-self: center;
     justify-self: center;
@@ -384,7 +384,7 @@ html{
     background: url(../images/landing/circle-1-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
-    border: 0.5rem dotted #b84916;
+    border: 0.1rem dotted #b84916;
     margin-left: -10rem;
 }
 
@@ -392,7 +392,7 @@ html{
     background: url(../images/landing/circle-2-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
-    border: 0.5rem dashed #242423;
+    border: 0.1rem dashed #242423;
     margin-right: -10rem;
 }
 
@@ -408,7 +408,7 @@ html{
     background: url(../images/landing/circle-4-img.jpg) center no-repeat;
     background-size: cover;
     background-clip: content-box;
-    border: 0.4rem double #608ef1;
+    border: 0.1rem double #608ef1;
     margin-right: -10rem;
 }
 .main-circle{
@@ -422,8 +422,8 @@ html{
 }
 
 .main-circle img:hover{
-    width:50rem;
-    height:55rem;
+    width:45rem;
+    height:50rem;
 }
 
 .main-circle img{
@@ -432,8 +432,8 @@ html{
     width: 40rem;
     height:45rem;
     position: relative;
-    mix-blend-mode: hard-light;
-    background-color: #9bf6ff;
+    mix-blend-mode: luminosity;
+    background-image: #fff;
     transition: left 3s, top 3s;
     left:0;
     top:0;
@@ -544,7 +544,7 @@ position: relative;
     display: flex;
     justify-content: center;
     position: relative;
-    border: 0.2rem dotted #024a52;
+    border: 0.2rem dotted #f1f1f1;
     border-radius: 0.5rem;
     cursor: pointer;
     perspective: 20rem;
@@ -696,6 +696,7 @@ position: relative;
 .section-4{
     position: relative;
     width: 100%; 
+    margin-bottom: 5rem;
 }
 
 /* services */
@@ -707,7 +708,7 @@ position: relative;
 .service{
     width:70%;
     margin:2rem 0;
-    border-bottom: 0.3rem groove rgb(2, 54, 34);
+    border-bottom: 0.3rem groove rgb(15, 2, 90);
 }
 
 .service-btn{
@@ -719,7 +720,7 @@ position: relative;
 
 .service-btn span{
     font-family: 'Poppins' , sans-serif;
-    font-size: 10rem;
+    font-size: 8rem;
     font-style: italic;
     font-weight: bold;
     color: #10c1e9;
@@ -729,7 +730,7 @@ position: relative;
 }
 
 .service-text{
-    font-size: 5rem;
+    font-size: 4rem;
     color:#777;
     letter-spacing: 0.1rem;
     height:0;
@@ -754,9 +755,23 @@ position: relative;
     position: relative;
     height: 100vh;
     flex-direction: column;
-    margin-top: 10rem;
+    margin-top: 15rem;
 }
 
+/* loader */
+.loader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    bottom:0;
+    left:0;
+    background: #000;
+    display: none; 
+}
 /* form */
 .form-heading{
     font-family: 'Poppins', sans-serif;
@@ -779,8 +794,8 @@ position: relative;
     background-color: rgba(255,255,255, 0.1);
     border: 0.1rem solid #d8fcfc;
     font-size: 1.7rem;
-    font-weight: bold;
-    color:#aaa;
+    font-weight: light;
+    color:#f1f1f1;
     letter-spacing: 0.1rem;
     height:5rem;
 }
@@ -790,14 +805,16 @@ position: relative;
     resize:none;
 }
 
+
 .form-submit-btn{
     width:20rem;
     height:5rem;
-    background-color: #6232e6;
+    background-image: linear-gradient(to top, #b224ef 0%, #7579ff 100%);
     border: none;
-    align-self: flex-start;
+    align-self: center;
     font-size: 1.8rem;
     color: #fff;
+    border-radius: 8px;
 }
 /*  end of form */
 

@@ -1,4 +1,4 @@
-
+ 
 // Mouse Circle
 const mouseCircle = document.querySelector(".mouse-circle");
 const mouseDot = document.querySelector(".mouse-dot");
