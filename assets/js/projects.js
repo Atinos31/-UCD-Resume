@@ -23,7 +23,7 @@ btn.addEventListener('mouseleave', () => {
 })
 
 // projects
-const container = document.querySelector('.container');
+const container1 = document.querySelector('.container1');
 const projects = document.querySelectorAll(".project");
 const projectHideBtn = document.querySelector(".project-hide-btn");
 
@@ -44,7 +44,7 @@ projects.forEach((project, i) => {
     project.addEventListener("click", () => {
         const bigImgWrapper = document.createElement('div');
         bigImgWrapper.className ="project-img-wrapper";
-        container.appendChild(bigImgWrapper);
+        container1.appendChild(bigImgWrapper);
 
         const bigImg = document.createElement("img");
         bigImg.className = "project-img";
